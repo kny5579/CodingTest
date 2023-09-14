@@ -3,8 +3,7 @@ import java.util.stream.Collectors;
 
 class Solution {
   public String solution(String s) {
-    s=s.toLowerCase();
-    String[] sArr=s.split("");
+    String[] sArr=s.toLowerCase().split("");
     sArr[0]=sArr[0].toUpperCase();
     for (int i = 1; i < sArr.length; i++) {
       if(sArr[i-1].equals(" ")){
