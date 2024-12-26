@@ -1,10 +1,10 @@
 # [level 1] 문자열 다루기 기본 - 12918 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12918?language=kotlin) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12918) 
 
 ### 성능 요약
 
-메모리: 61.6 MB, 시간: 0.03 ms
+메모리: 82 MB, 시간: 0.07 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 1월 2일 22:42:16
+2024년 12월 26일 09:46:23
 
 ### 문제 설명
 
