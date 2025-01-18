@@ -1,14 +1,17 @@
-import java.util.*;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
+
 class Solution {
     public int[] solution(int[] numbers) {
-        int[] answer = {};
-        HashSet<Integer> set=new HashSet<>();
+        HashSet<Integer> set = new HashSet<>();
         for (int i = 0; i < numbers.length-1; i++) {
             for (int j = i+1; j < numbers.length; j++) {
                 set.add(numbers[i]+numbers[j]);
             }
         }
-        answer=set.stream().mapToInt(i->i).toArray();
+        int[] answer = set.stream().mapToInt(Integer::intValue).toArray();
         Arrays.sort(answer);
         return answer;
     }
