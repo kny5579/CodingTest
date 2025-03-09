@@ -1,20 +1,21 @@
 class Solution {
-    public int[] solution(String s) {
-        int[] answer = new int[2];
-        String sCopy=s;
-        int zeroNum = 0;
-        int cnt = 0;
-        while(true) {
-            cnt++;
-            for(String a:sCopy.split("")){
-                if(a.equals("0")) zeroNum++;
-            }
-            sCopy=sCopy.replaceAll("0","");
-            sCopy=Integer.toBinaryString(sCopy.length());
-            if(sCopy.equals("1")) break;
+  public int[] solution(String s) {
+    int[] answer = new int[2];
+    int zeroNum=0;
+    int cnt=0;
+    while(!s.equals("1")){
+      cnt++;
+      for (int i = 0; i < s.length(); i++) {
+        if(s.charAt(i)=='0'){
+          zeroNum++;
         }
-        answer[0]=cnt;
-        answer[1]=zeroNum;
-        return answer;
+      }
+      s=s.replace("0","");
+      int c=s.length();
+      s=Integer.toBinaryString(c);
     }
+    answer[0]=cnt;
+    answer[1]=zeroNum;
+    return answer;
+  }
 }
