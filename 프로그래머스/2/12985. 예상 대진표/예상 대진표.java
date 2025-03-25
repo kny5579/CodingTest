@@ -2,19 +2,16 @@ class Solution
 {
     public int solution(int n, int a, int b)
     {
-        int answer = 0;
-        int aCopy = a;
-        int bCopy = b;
-        if(a>b) {
-            aCopy=b;
-            bCopy=a;
-        }
-        while(aCopy!=bCopy) {
-            aCopy=++aCopy/2;
-            bCopy=++bCopy/2;
-            answer++;
+        int round = 1;
+        for(int i=0;i<n;i++){
+            if((a+1)/2==(b+1)/2){
+                break;
+            }
+            round++;
+            a=(a+1)/2;
+            b=(b+1)/2;
         }
 
-        return answer;
+        return round;
     }
 }
