@@ -1,28 +1,23 @@
-public class Main{
-	
-	public static void main(String[] args) {
-		boolean Array[]=new boolean[10001];
-		
-		for(int i=1;i<Array.length;i++) {
-			int dn=getDn(i);
-			if(dn<=10000)
-				Array[dn]=true;
-		}
-		for(int i=1;i<Array.length;i++) {
-			if(!Array[i]) {
-				System.out.println(i);
-			}
-		}
-		
-	}
-	
+import java.util.Arrays;
+import java.util.Scanner;
 
-	public static int getDn(int n) {
-		int dn=n;
-		while(n>0) {
-			dn=dn+(n%10);
-			n=n/10;
-		}
-		return dn;
-	}
+public class Main {
+    public static void main(String[] args) {
+        boolean[] isTrue = new boolean[10001];
+        for (int i = 1; i < 10001; i++) {
+            String n = Integer.toString(i);
+            int sum = i;
+            for(String a : n.split("")) {
+                sum+=Integer.parseInt(a);
+            }
+            if(sum<=10000) {
+                isTrue[sum]=true;
+            }
+        }
+        for (int i = 1; i < 10001; i++) {
+            if(!isTrue[i]) {
+                System.out.println(i);
+            }
+        }
+    }
 }
