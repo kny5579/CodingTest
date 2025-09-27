@@ -1,21 +1,18 @@
-import java.util.List;
-
 class Solution {
     public String solution(String s) {
         String answer = "";
-        String[] arr =  s.split(" ",-1);
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr[i].length(); j++) {
-                if(j%2==0) {
-                    answer+=Character.toUpperCase(arr[i].charAt(j));
-                } else {
-                    answer+=Character.toLowerCase(arr[i].charAt(j));
-                }
+        s = s.toUpperCase();
+        int idx = 0;
+        for (int i = 0; i < s.length(); i++) {
+            if(s.charAt(i)==' ') {
+                answer+=" ";
+                idx=0;
+                continue;
             }
-            if(i==arr.length-1) break;
-            answer+=" ";
+            else if(idx%2!=0) answer+=Character.toLowerCase(s.charAt(i));
+            else answer+=s.charAt(i);
+            idx++;
         }
-
         return answer;
     }
 }
